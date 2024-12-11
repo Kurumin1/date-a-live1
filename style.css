@@ -1,0 +1,176 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f8f8f8; /* Optional, for overall page background */
+}
+
+/* Main container width */
+.main-width {
+  width: 900px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('12.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Header and logo styling */
+.hero header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Modified for logo and nav spacing */
+  padding: 40px 10px 30px;
+}
+
+.hero header .logo h2 a {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  font-family: "Noto Sans JP", serif;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Flex gap for better spacing between items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 5px; /* Reduced space for better alignment */
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.4s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  border-bottom: 2px solid white;
+}
+
+nav ul li.active a {
+  border-bottom: 2px solid white;
+}
+
+nav ul li.btn a {
+  background: transparent;
+  color: white;
+  border: 1px solid #f5dca8;
+  padding: 9px 20px;
+  border-radius: 80px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 150px;
+  transition: 0.3s, color 0.3s; /* For smoother interaction */
+}
+
+nav ul li.btn a:hover {
+  background-color: #f5dca8;
+  color: white;
+  border-color: #f5dca8;
+  scale: 115%;
+  transition: .3s ease-in-out; 
+
+}
+
+/* Main content */
+.content .main-text {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+  max-width: 600px; /* Center content width for better responsiveness */
+}
+
+.content .main-text h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.content .main-text h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  color: white;
+  margin: 0 0 45px;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds depth to text */
+}
+
+.content .main-text p {
+  width: 100%;
+  color: white;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 50px;
+  max-width: 480px; /* Added consistency with max width */
+}
+
+.content .main-text a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  padding: 9px 25px;
+  line-height: 1.4;
+  border-radius: 30px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.content .main-text #btn:hover {
+  background-color: #f5dca8;
+  color:black;
+  border-color: #f5dca8;
+  scale: 115%;
+  transition: .3s ease-in-out;
+}
+
+/* Optional - Adding Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero header {
+      padding: 30px 10px;
+      flex-direction: column;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  nav ul li a {
+      font-size: 18px;
+      padding-bottom: 3px;
+  }
+
+  .content .main-text h1 {
+      font-size: 45px;
+  }
+
+  .content .main-text p {
+      font-size: 14px;
+      width: 90%;
+  }
+}
